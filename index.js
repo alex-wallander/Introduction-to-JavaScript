@@ -107,9 +107,21 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+function hungryDog(weight, age){
+    if(weight <= 5 && age >= 1){
+      return weight * .05;
+    }else if(weight >= 6 && weight <= 10 && age >= 1){
+      return weight * .04;
+    }else if(weight >= 11 && weight <= 15 && age >= 1){
+      return weight * .02;
+    }else if(age >= 2/12 && age <= 4/12){
+      return weight * .1;
+    }else if(age >= 4/12 && age <= 7/12){
+      return weight * .05;
+    }else if(age >= 7/12 && age <= 1){
+      return weight * .04;
+    }
+}
 
 
 
@@ -133,10 +145,15 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
-function game(user, computer){
-    /*add your code here*/
-}
+// let randomNum = Math.floor(Math.random() * 3) + 1;
+// function game(user, computer){
+//     computer = randomNum;
+//     let msg = "";
+//     if(user === computer){
+//       msg = 'it's a tie'
+//       return msg;
+//     }else if()
+// }
   
   
 
@@ -151,8 +168,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.621371
   }
 
 
@@ -165,8 +182,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(feet){
+    return feet / 30.48
   }
  
 
@@ -201,8 +218,18 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(number){
+  if(number < 100 && number >= 90){
+    return 'you got an A';
+  }else if(number < 90 && number >= 80){
+    return 'you got a B';
+  }else if(number < 80 && number >= 70){
+    return 'you got a C';
+  }else if(number < 70 && number >= 60){
+    return 'you got a D';
+  }else if(number < 60){
+    return 'you got an F';
+  }
   }
   
   
