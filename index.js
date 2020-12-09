@@ -17,6 +17,10 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 18
+if(votingAge >=18){
+  console.log(true);
+}
 
 
 
@@ -79,7 +83,6 @@ function dogYears(human){
 }
 
 
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
@@ -113,6 +116,8 @@ function hungryDog(weight, age){
     }else if(weight >= 6 && weight <= 10 && age >= 1){
       return weight * .04;
     }else if(weight >= 11 && weight <= 15 && age >= 1){
+      return weight * .03;
+    }else if(weight >= 15 && age >= 1){
       return weight * .02;
     }else if(age >= 2/12 && age <= 4/12){
       return weight * .1;
@@ -145,16 +150,26 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-// let randomNum = Math.floor(Math.random() * 3) + 1;
-// function game(user, computer){
-//     computer = randomNum;
-//     let msg = "";
-//     if(user === computer){
-//       msg = 'it's a tie'
-//       return msg;
-//     }else if()
-// }
+  let randomNum = Math.ceil(Math.random() * 3);
   
+function game(user, computer){
+  if(randomNum === 1){
+    computer = "rock";
+  }else if(randomNum === 2){
+    computer = "paper";
+  }else if(randomNum === 3){
+    computer = "scissors";
+  }
+    if(user === computer){
+      return "it's a tie";
+    }
+    else if(user === "rock" && computer === "scissors" || user === "paper" && computer === "rock" || user === "scissors" && computer === "paper"){
+      return "you win!";
+    }
+    else if(user === "scissors" && computer === "rock" || user === "rock" && computer === "paper" || user === "paper" && computer === "scissors"){
+      return "you lose!";
+    }
+  }
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -198,8 +213,8 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(song){
+        
   }
 
 
