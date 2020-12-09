@@ -153,25 +153,38 @@ Use the game function below to do the following:
   let randomNum = Math.ceil(Math.random() * 3);
   
 function game(user, computer){
-  if(randomNum === 1){
+  if(computer === 1){
     computer = "rock";
-  }else if(randomNum === 2){
+  }else if(computer === 2){
     computer = "paper";
-  }else if(randomNum === 3){
+  }else if(computer === 3){
     computer = "scissors";
   }
     if(user === computer){
       return "it's a tie";
     }
-    else if(user === "rock" && computer === "scissors" || user === "paper" && computer === "rock" || user === "scissors" && computer === "paper"){
-      return "you win!";
+    if(user === "paper"){
+      if(computer === "rock"){
+        return "you win!";
+      }else{
+          return "you lose!";
     }
-    else if(user === "scissors" && computer === "rock" || user === "rock" && computer === "paper" || user === "paper" && computer === "scissors"){
-      return "you lose!";
+      }
+    if(user === "rock"){
+      if(computer === "scissors"){
+        return "you win!";
+      }else{
+          return "you lose!";
+      }
+    }
+    if(user === "scissors"){
+      if(computer === "paper"){
+        return "you win!";
+      }else{
+          return "you lose!";
+        }
     }
   }
-  
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
@@ -214,9 +227,9 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(song){
-        
+        return "{5} bottles of soda on the wall, {5} bottles of soda, take one down pass it around {5 - 1} bottles of soda on the wall"
   }
-
+console.log(annoyingSong(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
